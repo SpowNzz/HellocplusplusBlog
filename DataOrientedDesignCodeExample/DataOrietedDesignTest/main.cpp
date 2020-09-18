@@ -1,6 +1,6 @@
-#include "ood_no_inheritance_cont_memory_cars.h"
-#include "ood_no_inheritance_non_cont_memory_cars.h"
-#include "ood_inheritance_non_cont_memory_heap_cars.h"
+#include "ood_no_inheritance_stack_cars.h"
+#include "ood_no_inheritance_heap_cars.h"
+#include "ood_inheritance_heap_cars.h"
 #include "dod_cars_split_in_data_arrays.h"
 
 #define FRAMES_TO_SIMULATE 60
@@ -10,9 +10,9 @@
 ->Args({1024, FRAMES_TO_SIMULATE})              \
 ->Args({2048, FRAMES_TO_SIMULATE})              
 
-BASIC_BENCHMARK_TEST(OOD_NoInheritanceContMemoryCar);
-BASIC_BENCHMARK_TEST(OOD_NoInheritanceNonContMemoryCar);
-BASIC_BENCHMARK_TEST(OOD_InheritanceNonContMemoryCar);
+BASIC_BENCHMARK_TEST(OOD_NoInheritanceStackCar);
+BASIC_BENCHMARK_TEST(OOD_NoInheritanceHeapCar);
+BASIC_BENCHMARK_TEST(OOD_InheritanceHeapCar);
 BASIC_BENCHMARK_TEST(DOD_CarSplitInDataArrays);
 
 
