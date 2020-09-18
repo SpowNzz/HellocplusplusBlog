@@ -54,13 +54,13 @@
     <ClInclude Include="dod_cars_split_in_data_arrays.h">
       <Filter>TestCases\DOD</Filter>
     </ClInclude>
-    <ClInclude Include="ood_inheritance_heap_cars.h">
+    <ClInclude Include="ood_no_inheritance_cont_memory_cars.h">
       <Filter>TestCases\OOD</Filter>
     </ClInclude>
-    <ClInclude Include="ood_no_inheritance_heap_cars.h">
+    <ClInclude Include="ood_no_inheritance_non_cont_memory_cars.h">
       <Filter>TestCases\OOD</Filter>
     </ClInclude>
-    <ClInclude Include="ood_no_inheritance_stack_cars.h">
+    <ClInclude Include="ood_inheritance_non_cont_memory_heap_cars.h">
       <Filter>TestCases\OOD</Filter>
     </ClInclude>
   </ItemGroup>
