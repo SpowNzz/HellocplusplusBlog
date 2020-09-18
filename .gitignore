@@ -30,3 +30,20 @@
 *.exe
 *.out
 *.app
+
+# Others
+*.tlog
+*.suo
+*.db
+*.db-shm
+*.db-wal
+*.opendb
+*.ipch
+*.vcxproj.user
+*.idb
+*.pdb
+*.log
+*.ilk
+*.iobj
+*.ipdb
+*.txt
