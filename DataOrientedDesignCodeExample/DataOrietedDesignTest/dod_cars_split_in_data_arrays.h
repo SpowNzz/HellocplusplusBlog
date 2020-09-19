@@ -56,7 +56,6 @@ static void DOD_CarSplitInDataArrays(benchmark::State& inState)
 
             benchmark::DoNotOptimize(update_index);
             benchmark::DoNotOptimize(delta_time);
-            benchmark::DoNotOptimize(delta_time);
         }
         benchmark::DoNotOptimize(store);
     }
