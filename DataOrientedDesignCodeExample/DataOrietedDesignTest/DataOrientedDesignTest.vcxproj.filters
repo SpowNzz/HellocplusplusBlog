@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{648172fe-2687-497b-be52-12633968d180}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestCases">
+      <UniqueIdentifier>{2a2f2a75-7578-43cb-8cc8-860876f78e70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CarData">
+      <UniqueIdentifier>{16114965-a3a3-4f82-bad9-50a2a5377975}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CarData\Shared">
+      <UniqueIdentifier>{c5c68f60-f9b3-4e0f-8c63-7a625e30b1a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestCases\DOD">
+      <UniqueIdentifier>{4d9a3efd-8a53-4faf-afe8-bd6079a7879b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestCases\OOD">
+      <UniqueIdentifier>{b74fe324-3acd-4fa1-b4e4-46226c69d85c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="dod_car_data.cpp">
+      <Filter>CarData</Filter>
+    </ClCompile>
+    <ClCompile Include="ood_car.cpp">
+      <Filter>CarData</Filter>
+    </ClCompile>
+    <ClCompile Include="ood_car_inheritance.cpp">
+      <Filter>CarData</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="vector2.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="random.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="car_info.h">
+      <Filter>CarData\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="dod_car_data.h">
+      <Filter>CarData</Filter>
+    </ClInclude>
+    <ClInclude Include="ood_car.h">
+      <Filter>CarData</Filter>
+    </ClInclude>
+    <ClInclude Include="ood_car_inheritance.h">
+      <Filter>CarData</Filter>
+    </ClInclude>
+    <ClInclude Include="dod_cars_split_in_data_arrays.h">
+      <Filter>TestCases\DOD</Filter>
+    </ClInclude>
+    <ClInclude Include="ood_no_inheritance_cont_memory_cars.h">
+      <Filter>TestCases\OOD</Filter>
+    </ClInclude>
+    <ClInclude Include="ood_no_inheritance_non_cont_memory_cars.h">
+      <Filter>TestCases\OOD</Filter>
+    </ClInclude>
+    <ClInclude Include="ood_inheritance_non_cont_memory_heap_cars.h">
+      <Filter>TestCases\OOD</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
