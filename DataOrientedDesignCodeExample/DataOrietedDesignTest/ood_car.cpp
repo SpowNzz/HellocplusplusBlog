@@ -18,7 +18,7 @@ void Car::UpdateSteering(const float inDrivingWheelAngle)
 	if (!IsActivated() || !HaveFuel() || IsDead())
 		return;
 
-	m_Direction.RotatedDeg(inDrivingWheelAngle);
+	m_Direction.RotateDeg(inDrivingWheelAngle);
 }
 
 void Car::UpdateVelocity(const float inModification)

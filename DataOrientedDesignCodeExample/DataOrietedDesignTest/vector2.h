@@ -75,7 +75,7 @@ public:
         return Vector2D(m_X / length, m_Y / length);
     }
 
-    void RotatedDeg(float inAngleDegrees)
+    void RotateDeg(float inAngleDegrees)
     {
         constexpr const float pi = 3.14159265358979323846f;
         const float radians = inAngleDegrees * (pi / 180.0f);

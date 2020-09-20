@@ -257,7 +257,7 @@ namespace Details
 	{
 		unsigned int index = 0;
 		for (Vector2D& direction : outDirectionsToUpdate)
-			direction.RotatedDeg(ioSteeringData[index++]);
+			direction.RotateDeg(ioSteeringData[index++]);
 	}
 
 	void PreapareVelocitiesToUpdate(const vector<unsigned int>& inCarsToUpdate,
