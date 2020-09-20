@@ -45,29 +45,25 @@ PetrolCar::PetrolCar(const uint64_t inID, const Vector2D& inPosition, const Vect
 
 void PetrolCar::UpdateSteering(const float inDrivingWheelAngle)
 {
-	if (!IsActivated() || !HaveFuel() || IsDead())
-		return;
-
-	m_Direction.RotateDeg(inDrivingWheelAngle);
+	if (IsActivated() && HaveFuel() && !IsDead())
+		m_Direction.RotateDeg(inDrivingWheelAngle);
 }
 
 void PetrolCar::UpdateVelocity(const float inModification)
 {
-	if (!IsActivated() || !HaveFuel() || IsDead())
-		return;
-
-	m_Velocity += inModification;
+	if (IsActivated() && HaveFuel() && !IsDead())
+		m_Velocity += inModification;
 }
 
 void PetrolCar::UpdateMovement(const float inDeltaTime)
 {
-	if (!IsActivated() || !HaveFuel() || IsDead())
-		return;
-
-	const Vector2D new_position = m_Position + m_Direction * (m_Velocity * inDeltaTime);
-	float distance_traveled = (m_Position - new_position).Length();
-	m_RemainingFuel -= distance_traveled * m_FuelPctConsumptionPerMeter;
-	m_Position = new_position;
+	if (IsActivated() && HaveFuel() && !IsDead())
+	{
+		const Vector2D new_position = m_Position + m_Direction * (m_Velocity * inDeltaTime);
+		float distance_traveled = (m_Position - new_position).Length();
+		m_RemainingFuel -= distance_traveled * m_FuelPctConsumptionPerMeter;
+		m_Position = new_position;
+	}
 }
 
 bool PetrolCar::HaveFuel() const
