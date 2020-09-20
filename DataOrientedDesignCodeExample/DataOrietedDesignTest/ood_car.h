@@ -7,7 +7,7 @@ class Car
 {
 public:
     // Constructor
-    Car(const long long inID, const Vector2D& inPosition, const Vector2D& inDirection);
+    Car(const uint64_t inID, const Vector2D& inPosition, const Vector2D& inDirection);
 
     // Modification API
     void UpdateSteering(const float inDrivingWheelAngle);
@@ -24,7 +24,7 @@ public:
 
 private:
     // Car data
-    const long long m_ID;
+    const uint64_t m_ID;
     CarInfo m_CarInfo;
     bool m_IsActivated;
     Vector2D m_Position;

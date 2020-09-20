@@ -10,7 +10,7 @@ class CarBase
 {
 public:
 	// Constructor
-	CarBase(const long long inID, const Vector2D& inPosition, const Vector2D& inDirection);
+	CarBase(const uint64_t inID, const Vector2D& inPosition, const Vector2D& inDirection);
 
 	// Destructor
 	virtual ~CarBase() = default;
@@ -29,7 +29,7 @@ public:
 
 private:
 	// Private base car data
-	const long long m_ID;
+	const uint64_t m_ID;
 	bool m_IsActivated;
 	float m_RemainignHealth;
 
@@ -45,7 +45,7 @@ class PetrolCar : public CarBase
 {
 public:
 	// Constructor
-	PetrolCar(const long long inID, const Vector2D& inPosition, const Vector2D& inDirection);
+	PetrolCar(const uint64_t inID, const Vector2D& inPosition, const Vector2D& inDirection);
 
 	// Destructor
 	virtual ~PetrolCar() = default;

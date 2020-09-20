@@ -1,6 +1,6 @@
 #include "ood_car_inheritance.h"
 
-CarBase::CarBase(const long long inID, const Vector2D& inPosition, const Vector2D& inDirection)
+CarBase::CarBase(const uint64_t inID, const Vector2D& inPosition, const Vector2D& inDirection)
 	: m_ID(inID)
 	, m_CarInfo(GetRandomCarInfo())
 	, m_IsActivated(true)
@@ -36,7 +36,7 @@ bool CarBase::IsDead() const
 	return m_RemainignHealth <= 0.0f;
 }
 
-PetrolCar::PetrolCar(const long long inID, const Vector2D& inPosition, const Vector2D& inDirection)
+PetrolCar::PetrolCar(const uint64_t inID, const Vector2D& inPosition, const Vector2D& inDirection)
 	: CarBase(inID, inPosition, inDirection)
 	, m_RemainingFuel(100.0f)
 	, m_FuelPctConsumptionPerMeter(2.0f)

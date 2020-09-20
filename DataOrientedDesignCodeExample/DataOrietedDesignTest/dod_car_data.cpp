@@ -91,7 +91,7 @@ CarsStore::CarsStore()
 
 CarsStore::~CarsStore() = default;
 
-void CarsStore::CreateCar(const long long inID, const Vector2D& inPosition, const Vector2D& inDirection)
+void CarsStore::CreateCar(const uint64_t inID, const Vector2D& inPosition, const Vector2D& inDirection)
 {
 	m_IDs.push_back(inID);
 	m_Positions.push_back(inPosition);

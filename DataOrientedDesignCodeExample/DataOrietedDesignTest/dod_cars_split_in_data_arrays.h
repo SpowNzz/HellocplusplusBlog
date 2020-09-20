@@ -24,7 +24,7 @@ static void DOD_CarSplitInDataArrays(benchmark::State& inState)
     {
         // Create a car
         // We use random values because they don't matter for the purpose of this example
-        const long long id = RandInt();
+        const uint64_t id = RandInt();
         const auto pos = Vector2D(RandFloat(), RandFloat());
         const auto dir = Vector2D(RandFloat(), RandFloat()).Normalized();
         store.CreateCar(id, pos, dir);

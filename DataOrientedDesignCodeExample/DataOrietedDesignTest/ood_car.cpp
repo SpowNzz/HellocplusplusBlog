@@ -1,6 +1,6 @@
 #include "ood_car.h"
 
-Car::Car(const long long inID, const Vector2D& inPosition, const Vector2D& inDirection)
+Car::Car(const uint64_t inID, const Vector2D& inPosition, const Vector2D& inDirection)
 	: m_ID(inID)
 	, m_CarInfo(GetRandomCarInfo())
 	, m_IsActivated(true)

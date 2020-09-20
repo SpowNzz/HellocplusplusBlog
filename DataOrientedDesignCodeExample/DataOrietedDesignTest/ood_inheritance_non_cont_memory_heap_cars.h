@@ -24,7 +24,7 @@ static void OOD_InheritanceNonContMemoryCar(benchmark::State& inState)
     vector<unique_ptr<CarBase>> cars4;
     for (unsigned int car_index = 0; car_index < num_of_cars; ++car_index)
     {
-        const long long id = RandInt();
+        const uint64_t id = RandInt();
         const auto pos = Vector2D(RandFloat(), RandFloat());
         const auto dir = Vector2D(RandFloat(), RandFloat()).Normalized();
         cars.push_back(make_unique<PetrolCar>(id, pos, dir));

@@ -34,7 +34,7 @@ public:
 	~CarsStore();
 
 	// Public modification API
-	void CreateCar(const long long inID, const Vector2D& inPosition, const Vector2D& inDirection);
+	void CreateCar(const uint64_t inID, const Vector2D& inPosition, const Vector2D& inDirection);
 	void SetCarToActivedState(const unsigned int inCarIndex);
 	void SetCarToDeactivatedState(const unsigned int inCarIndex);
 	void DamageCar(const unsigned int inCarIndex, const float inDamage);
@@ -50,7 +50,7 @@ public:
 private:
 	// Store data
 	unsigned int m_NumOfCars;
-	vector<long long> m_IDs;
+	vector<uint64_t> m_IDs;
 	vector<State> m_ActivationStates;
 	vector<Vector2D> m_Positions;
 	vector<Vector2D> m_Directions;

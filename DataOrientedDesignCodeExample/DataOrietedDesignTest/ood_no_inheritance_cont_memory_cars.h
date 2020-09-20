@@ -22,7 +22,7 @@ static void OOD_NoInheritanceContMemoryCar(benchmark::State& inState)
     for (unsigned int car_index = 0; car_index < num_of_cars; ++car_index)
     {
         // Create a car
-        const long long id = RandInt();
+        const uint64_t id = RandInt();
         const auto pos = Vector2D(RandFloat(), RandFloat());
         const auto dir = Vector2D(RandFloat(), RandFloat()).Normalized();
         cars.emplace_back(Car(id, pos, dir));
