@@ -122,8 +122,6 @@ void CarsStore::DamageCar(const unsigned int inCarIndex, const float inDamage)
 
 void CarsStore::UpdateCars(const float inDeltaTime, const vector<float>& ioSteeringData, const vector<float>& ioVelocityModificationData)
 {
-	// Update pipeline
-
 	using namespace Details;
 
 	// Select which cars need to be updated this frame
@@ -229,8 +227,8 @@ bool CarsStore::IsCarDead(const unsigned int inCarIndex) const
 namespace Details
 {
 	void SelectCarsToUpdate(const CarsStore& inStore,
-		const unsigned int inNumOfCars,
-		vector<unsigned int>& outCarsToUpdate)
+							const unsigned int inNumOfCars,
+							vector<unsigned int>& outCarsToUpdate)
 	{
 		for (unsigned int car_index = 0; car_index < inNumOfCars; ++car_index)
 		{
@@ -244,16 +242,16 @@ namespace Details
 	}
 
 	void PreapareDirectionsToUpdate(const vector<unsigned int>& inCarsToUpdate,
-		const vector<Vector2D>& inDirections,
-		vector<Vector2D>& outDirectionsToUpdate)
+									const vector<Vector2D>& inDirections,
+									vector<Vector2D>& outDirectionsToUpdate)
 	{
 		for (unsigned int car_index : inCarsToUpdate)
 			outDirectionsToUpdate.push_back(inDirections[car_index]);
 	}
 
 	void UpdateSteering(const float inDeltaTime,
-		const vector<float>& ioSteeringData,
-		vector<Vector2D>& outDirectionsToUpdate)
+						const vector<float>& ioSteeringData,
+						vector<Vector2D>& outDirectionsToUpdate)
 	{
 		unsigned int index = 0;
 		for (Vector2D& direction : outDirectionsToUpdate)
@@ -261,16 +259,16 @@ namespace Details
 	}
 
 	void PreapareVelocitiesToUpdate(const vector<unsigned int>& inCarsToUpdate,
-		const vector<float>& inVeloctities,
-		vector<float>& outVelocitiesToUpdate)
+									const vector<float>& inVeloctities,
+									vector<float>& outVelocitiesToUpdate)
 	{
 		for (unsigned int car_index : inCarsToUpdate)
 			outVelocitiesToUpdate.push_back(inVeloctities[car_index]);
 	}
 
 	void UpdateVelocity(const float inDeltaTime,
-		const vector<float>& ioVelocityModificationData,
-		vector<float>& outVelocitiesToUpdate)
+						const vector<float>& ioVelocityModificationData,
+						vector<float>& outVelocitiesToUpdate)
 	{
 		unsigned int index = 0;
 		for (float& velocity : outVelocitiesToUpdate)
@@ -278,10 +276,10 @@ namespace Details
 	}
 
 	void PreapareMovementDataForCarsToUpdate(const vector<unsigned int>& inCarsToUpdate,
-		const vector<Vector2D>& inPositions,
-		const vector<Vector2D>& inDirections,
-		const vector<float>& inVeloctities,
-		vector<MovementDataForCarsToUpdate>& outMovementDataForCarsToUpdate)
+											 const vector<Vector2D>& inPositions,
+											 const vector<Vector2D>& inDirections,
+											 const vector<float>& inVeloctities,
+											 vector<MovementDataForCarsToUpdate>& outMovementDataForCarsToUpdate)
 	{
 		for (unsigned int car_index : inCarsToUpdate)
 		{
@@ -308,10 +306,10 @@ namespace Details
 	}
 
 	void PreapareFuelForCarsToUpdate(const vector<unsigned int>& inCarsToUpdate,
-		const vector<float>& inFuel,
-		const vector<float>& inFuelConsumptionPerMeter,
-		const vector<MovementDataForCarsToUpdate>& inMovementDataForCarsToUpdate,
-		vector<FuelDataForCarsToUpdate>& outFuelDataForCarsToUpdate)
+									 const vector<float>& inFuel,
+									 const vector<float>& inFuelConsumptionPerMeter,
+									 const vector<MovementDataForCarsToUpdate>& inMovementDataForCarsToUpdate,
+									 vector<FuelDataForCarsToUpdate>& outFuelDataForCarsToUpdate)
 	{
 		unsigned int movement_data_index = 0;
 		for (unsigned int car_index : inCarsToUpdate)
