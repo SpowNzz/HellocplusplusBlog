@@ -11,7 +11,7 @@ public:
 
     // Modification API
     void UpdateSteering(const float inDrivingWheelAngle);
-    void UpdateVelocity(const float inModification);
+    void UpdateSpeed(const float inModification);
     void UpdateMovement(const float inDeltaTime);
     void TakeDamage(const float inDamage);
     void SetToActivated();
@@ -29,7 +29,7 @@ private:
     bool m_IsActivated;
     Vector2D m_Position;
     Vector2D m_Direction;
-    float m_Velocity;
+    float m_Speed;
     float m_RemainingFuel;
 	float m_FuelPctConsumptionPerMeter;
     float m_RemainignHealth;

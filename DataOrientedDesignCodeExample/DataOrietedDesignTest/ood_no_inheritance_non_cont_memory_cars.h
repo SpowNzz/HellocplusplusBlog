@@ -40,7 +40,7 @@ static void OOD_NoInheritanceNonContMemoryCar(benchmark::State& inState)
     }
 
     const float steering_input = RandFloat(-2.5f, 2.5f);
-    const float velocity_modification = RandFloat(0.0f, 0.2f);
+    const float speed_modification = RandFloat(0.0f, 0.2f);
 
     for (auto _ : inState)
     {
@@ -53,7 +53,7 @@ static void OOD_NoInheritanceNonContMemoryCar(benchmark::State& inState)
 					cars[car_index]->TakeDamage(7.0f);
 
                 cars[car_index]->UpdateSteering(steering_input);
-                cars[car_index]->UpdateVelocity(velocity_modification);
+                cars[car_index]->UpdateSpeed(speed_modification);
 				cars[car_index]->UpdateMovement(delta_time);
 			}
 

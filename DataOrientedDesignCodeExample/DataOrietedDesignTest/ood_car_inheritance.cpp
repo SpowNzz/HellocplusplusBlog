@@ -49,7 +49,7 @@ void PetrolCar::UpdateSteering(const float inDrivingWheelAngle)
 		m_Direction.RotateDeg(inDrivingWheelAngle);
 }
 
-void PetrolCar::UpdateVelocity(const float inModification)
+void PetrolCar::UpdateSpeed(const float inModification)
 {
 	if (IsActivated() && HaveFuel() && !IsDead())
 		m_Velocity += inModification;

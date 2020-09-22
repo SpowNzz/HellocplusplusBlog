@@ -19,7 +19,7 @@ static void DOD_CarSplitInDataArrays(benchmark::State& inState)
     // This is not part of the measurement.
     CarsStore store;
     vector<float> steering_input;
-    vector<float> velocity_modifications;
+    vector<float> speed_modifications;
     for (unsigned int car_index = 0; car_index < num_of_cars; ++car_index)
     {
         // Create a car
@@ -35,7 +35,7 @@ static void DOD_CarSplitInDataArrays(benchmark::State& inState)
 
         // Create random simulated input that is going to be used to update the cars
         steering_input.push_back(RandFloat(-2.5f, 2.5f));
-        velocity_modifications.push_back(RandFloat(0.0f, 0.2f));
+        speed_modifications.push_back(RandFloat(0.0f, 0.2f));
     }
     
 
@@ -52,7 +52,7 @@ static void DOD_CarSplitInDataArrays(benchmark::State& inState)
 
 			// Update the cars
             const float delta_time = RandDeltaTime();
-            store.UpdateCars(delta_time, steering_input, velocity_modifications);
+            store.UpdateCars(delta_time, steering_input, speed_modifications);
 
             benchmark::DoNotOptimize(update_index);
             benchmark::DoNotOptimize(delta_time);

@@ -6,7 +6,7 @@ Car::Car(const uint64_t inID, const Vector2D& inPosition, const Vector2D& inDire
 	, m_IsActivated(true)
 	, m_Position(inPosition)
 	, m_Direction(inDirection)
-	, m_Velocity(0.0f)
+	, m_Speed(0.0f)
 	, m_RemainingFuel(100.0f)
 	, m_FuelPctConsumptionPerMeter(2.0f)
 	, m_RemainignHealth(100.0f)
@@ -19,18 +19,18 @@ void Car::UpdateSteering(const float inDrivingWheelAngle)
 		m_Direction.RotateDeg(inDrivingWheelAngle);
 }
 
-void Car::UpdateVelocity(const float inModification)
+void Car::UpdateSpeed(const float inModification)
 {
 	if (IsActivated() && HaveFuel() && !IsDead())
-		m_Velocity += inModification;
+		m_Speed += inModification;
 }
 
 void Car::UpdateMovement(const float inDeltaTime)
 {
 	if (IsActivated() && HaveFuel() && !IsDead())
 	{
-		const float frame_velocity = m_Velocity * inDeltaTime;
-		const Vector2D new_position = m_Position + m_Direction * frame_velocity;
+		const float frame_speed = m_Speed * inDeltaTime;
+		const Vector2D new_position = m_Position + m_Direction * frame_speed;
 		const float distance_traveled = (m_Position - new_position).Length();
 		m_RemainingFuel -= distance_traveled * m_FuelPctConsumptionPerMeter;
 		m_Position = new_position;

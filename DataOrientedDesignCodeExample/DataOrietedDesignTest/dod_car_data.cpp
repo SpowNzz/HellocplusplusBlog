@@ -16,7 +16,7 @@ namespace Details
 	{
 		Vector2D m_Position;
 		const Vector2D m_Diretion;
-		const float m_Velocity;
+		const float m_Speed;
 		float m_DistanceTraveled;
 	};
 	
@@ -55,13 +55,13 @@ namespace Details
 						const vector<float>& ioSteeringData,
 						vector<Vector2D>& outDirectionsToUpdate);
 
-	// Prepare the velocity data and update cars' velocity
+	// Prepare the speed data and update cars' speed
 	void PreapareVelocitiesToUpdate(const vector<unsigned int>& inCarsToUpdate,
 									const vector<float>& inVeloctities,
 									vector<float>& outVelocitiesToUpdate);
 
-	void UpdateVelocity(const float inDeltaTime,
-						const vector<float>& ioVelocityModificationData,
+	void UpdateSpeed(const float inDeltaTime,
+						const vector<float>& ioSpeedModificationData,
 						vector<float>& outVelocitiesToUpdate);
 
 	// Prepare the movement data and update cars' position
@@ -120,7 +120,7 @@ void CarsStore::DamageCar(const unsigned int inCarIndex, const float inDamage)
 	m_HealthData[inCarIndex] -= inDamage;
 }
 
-void CarsStore::UpdateCars(const float inDeltaTime, const vector<float>& ioSteeringData, const vector<float>& ioVelocityModificationData)
+void CarsStore::UpdateCars(const float inDeltaTime, const vector<float>& ioSteeringData, const vector<float>& ioSpeedModificationData)
 {
 	using namespace Details;
 
@@ -155,10 +155,10 @@ void CarsStore::UpdateCars(const float inDeltaTime, const vector<float>& ioSteer
 		m_TransientData->m_VelocitiesToUpdate
 	);
 	// Update the velocities data of the cars selected for update
-	UpdateVelocity
+	UpdateSpeed
 	(
 		inDeltaTime, 
-		ioVelocityModificationData, 
+		ioSpeedModificationData,
 		m_TransientData->m_VelocitiesToUpdate
 	);
 
@@ -266,13 +266,13 @@ namespace Details
 			outVelocitiesToUpdate.push_back(inVeloctities[car_index]);
 	}
 
-	void UpdateVelocity(const float inDeltaTime,
-						const vector<float>& ioVelocityModificationData,
+	void UpdateSpeed(const float inDeltaTime,
+						const vector<float>& ioSpeedModificationData,
 						vector<float>& outVelocitiesToUpdate)
 	{
 		unsigned int index = 0;
-		for (float& velocity : outVelocitiesToUpdate)
-			velocity += ioVelocityModificationData[index++];
+		for (float& speed : outVelocitiesToUpdate)
+			speed += ioSpeedModificationData[index++];
 	}
 
 	void PreapareMovementDataForCarsToUpdate(const vector<unsigned int>& inCarsToUpdate,
@@ -298,7 +298,7 @@ namespace Details
 		{
 			const Vector2D& pos = movement_data.m_Position;
 			const Vector2D& dir = movement_data.m_Diretion;
-			const float vel = movement_data.m_Velocity * inDeltaTime;
+			const float vel = movement_data.m_Speed * inDeltaTime;
 			const Vector2D new_position = pos + dir * vel;
 			movement_data.m_DistanceTraveled = (pos - new_position).Length();
 			movement_data.m_Position = new_position;

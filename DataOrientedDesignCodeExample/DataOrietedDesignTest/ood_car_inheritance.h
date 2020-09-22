@@ -17,7 +17,7 @@ public:
 
 	// Modification API
 	virtual void UpdateSteering(const float inDrivingWheelAngle) = 0;
-	virtual void UpdateVelocity(const float inModification) = 0;
+	virtual void UpdateSpeed(const float inModification) = 0;
 	virtual void UpdateMovement(const float inDeltaTime) = 0;
 	void SetToActivated();
 	void SetToDeactivated();
@@ -52,7 +52,7 @@ public:
 
 	// Modification API Override
 	virtual void UpdateSteering(const float inDrivingWheelAngle) override;
-	virtual void UpdateVelocity(const float inModification) override;
+	virtual void UpdateSpeed(const float inModification) override;
 	virtual void UpdateMovement(const float inDeltaTime) override;
 
 	// Additonal Query API
