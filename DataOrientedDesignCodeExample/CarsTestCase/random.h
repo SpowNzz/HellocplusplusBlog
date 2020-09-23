@@ -26,13 +26,13 @@ inline int RandInt(const int inFrom, const int inTo)
 
 inline float RandFloat()
 {
-	static std::uniform_real_distribution<float> distribution(0, std::numeric_limits<float>::max());
+	std::uniform_real_distribution<float> distribution(0, std::numeric_limits<float>::max());
 	return distribution(mt);
 }
 
 inline float RandFloat(const float inFrom, const float inTo)
 {
-	static std::uniform_real_distribution<float> distribution(inFrom, inTo);
+	std::uniform_real_distribution<float> distribution(inFrom, inTo);
 	return distribution(mt);
 }
 
