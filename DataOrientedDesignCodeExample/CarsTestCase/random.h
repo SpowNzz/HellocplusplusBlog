@@ -14,7 +14,7 @@ inline float RandDeltaTime()
 
 inline int RandInt()
 {
-	std::uniform_int_distribution<int> distribution(0, numeric_limits<int>::max());
+	std::uniform_int_distribution<int> distribution(0, std::numeric_limits<int>::max());
 	return distribution(mt);
 }
 
@@ -26,7 +26,7 @@ inline int RandInt(const int inFrom, const int inTo)
 
 inline float RandFloat()
 {
-	static std::uniform_real_distribution<float> distribution(0, numeric_limits<float>::max());
+	static std::uniform_real_distribution<float> distribution(0, std::numeric_limits<float>::max());
 	return distribution(mt);
 }
 
