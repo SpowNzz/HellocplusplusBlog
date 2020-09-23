@@ -14,7 +14,7 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{865F1835-F63C-4D1B-B3F6-42B3B0B39547}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>DataOrientedDesignTest</RootNamespace>
+    <RootNamespace>CarsTestCase</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
