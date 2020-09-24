@@ -17,7 +17,7 @@ static void OOD(benchmark::State& inState)
 
     // Initialize the boats data. 
     // NOTE: This is not part of the measurement.
-    vector<BoatRentalMonthlyInfo> boats_info;
+    vector<BoatMonthlyRentalInfo> boats_info;
     for (unsigned int boat_index = 0; boat_index < num_of_boats; ++boat_index)
     {
         boats_info.push_back

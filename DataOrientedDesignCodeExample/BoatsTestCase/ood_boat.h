@@ -4,11 +4,11 @@
 
 using namespace std;
 
-class BoatRentalMonthlyInfo
+class BoatMonthlyRentalInfo
 {
 public:
 	// Constructor
-	BoatRentalMonthlyInfo(const string& inName, 
+	BoatMonthlyRentalInfo(const string& inName, 
 						  unsigned int inNrOfRents, 
 						  float inMaintenanceCostPerRent,
 						  float inCrewCostPerRent, 

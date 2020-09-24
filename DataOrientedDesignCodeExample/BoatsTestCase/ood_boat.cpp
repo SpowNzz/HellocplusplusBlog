@@ -1,6 +1,6 @@
 #include "ood_boat.h"
 
-BoatRentalMonthlyInfo::BoatRentalMonthlyInfo(const string& inName, 
+BoatMonthlyRentalInfo::BoatMonthlyRentalInfo(const string& inName, 
 											 unsigned int inNrOfRents, 
 											 float inMaintenanceCostPerRent,
 											 float inCrewCostPerRent,
@@ -13,24 +13,24 @@ BoatRentalMonthlyInfo::BoatRentalMonthlyInfo(const string& inName,
 {
 }
 
-float BoatRentalMonthlyInfo::CalculateReturnOnInvestment() const
+float BoatMonthlyRentalInfo::CalculateReturnOnInvestment() const
 {
 	const float earnings = CalculateEarning();
 	const float cost = CalculateMaintenanceCost() + CalculateCrewCost();
 	return (earnings / cost) * 100.0f - 100.0f;
 }
 
-float BoatRentalMonthlyInfo::CalculateEarning() const
+float BoatMonthlyRentalInfo::CalculateEarning() const
 {
 	return m_NrOfRents * m_EarningsPerRent;
 }
 
-float BoatRentalMonthlyInfo::CalculateMaintenanceCost() const
+float BoatMonthlyRentalInfo::CalculateMaintenanceCost() const
 {
 	return m_NrOfRents * m_MaintenanceCostPerRent;
 }
 
-float BoatRentalMonthlyInfo::CalculateCrewCost() const
+float BoatMonthlyRentalInfo::CalculateCrewCost() const
 {
 	return m_NrOfRents * m_CrewCostPerRent;
 }
