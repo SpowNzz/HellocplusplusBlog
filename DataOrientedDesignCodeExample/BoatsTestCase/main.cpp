@@ -2,13 +2,13 @@
 #include "dod.h"
 
 #define BASIC_BENCHMARK_TEST(x) BENCHMARK(x)  \
-->Args({20000})                               \
-->Args({40000})                               \
-->Args({80000})                               \
-->Args({160000})              
+->Args({2000})                               \
+->Args({4000})                               \
+->Args({8000})                               \
+->Args({16000})              
 
 BASIC_BENCHMARK_TEST(OOD);
-//BASIC_BENCHMARK_TEST(DOD);
+BASIC_BENCHMARK_TEST(DOD);
 
 int main(int argc, char** argv) 
 {
