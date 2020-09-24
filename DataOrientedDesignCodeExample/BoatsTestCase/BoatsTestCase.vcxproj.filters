@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="dod_car_data.cpp">
+      <Filter>BoatData</Filter>
+    </ClCompile>
+    <ClCompile Include="ood_boat.cpp">
+      <Filter>BoatData</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="random.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="dod_car_data.h">
+      <Filter>BoatData</Filter>
+    </ClInclude>
+    <ClInclude Include="dod.h">
+      <Filter>TestCases</Filter>
+    </ClInclude>
+    <ClInclude Include="ood.h">
+      <Filter>TestCases</Filter>
+    </ClInclude>
+    <ClInclude Include="ood_boat.h">
+      <Filter>BoatData</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="BoatData">
+      <UniqueIdentifier>{05f41068-3b2f-4d8d-a9b0-e0c322a5c70f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestCases">
+      <UniqueIdentifier>{dc34c95b-2f42-4342-9f99-17efb18b4465}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{e783c5c0-8678-4f5a-8c12-b357b8f019cb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

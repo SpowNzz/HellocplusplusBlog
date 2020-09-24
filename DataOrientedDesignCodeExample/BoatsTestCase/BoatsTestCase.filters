@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ood_car.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="dod_car_data.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="random.h" />
+    <ClInclude Include="ood_car.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="dod_car_data.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="dod.h">
+      <Filter>TestCases</Filter>
+    </ClInclude>
+    <ClInclude Include="ood.h">
+      <Filter>TestCases</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="TestCases">
+      <UniqueIdentifier>{88dc5f98-9b81-4b6f-b019-3566d798cefc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{d7868daa-5b88-44a2-9398-08d77f4194e0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
