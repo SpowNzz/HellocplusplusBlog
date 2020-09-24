@@ -91,12 +91,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="dod_boat.cpp" />
     <ClCompile Include="dod_car_data.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ood_boat.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dod.h" />
+    <ClInclude Include="dod_boat.h" />
     <ClInclude Include="ood.h" />
     <ClInclude Include="ood_boat.h" />
     <ClInclude Include="dod_car_data.h" />

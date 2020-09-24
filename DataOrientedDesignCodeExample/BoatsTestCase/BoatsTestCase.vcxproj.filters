@@ -5,6 +5,7 @@
     <ClCompile Include="ood_boat.cpp">
       <Filter>BoatData</Filter>
     </ClCompile>
+    <ClCompile Include="dod_car_data.cpp" />
     <ClCompile Include="dod_boat.cpp">
       <Filter>BoatData</Filter>
     </ClCompile>
@@ -22,6 +23,7 @@
     <ClInclude Include="ood_boat.h">
       <Filter>BoatData</Filter>
     </ClInclude>
+    <ClInclude Include="dod_car_data.h" />
     <ClInclude Include="dod_boat.h">
       <Filter>BoatData</Filter>
     </ClInclude>
