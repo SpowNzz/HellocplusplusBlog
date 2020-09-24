@@ -3,12 +3,11 @@
 BoatMonthlyRentalInfo::BoatMonthlyRentalInfo(const string& inName, 
 											 unsigned int inNrOfRents, 
 											 float inMaintenanceCostPerRent,
-											 float inCrewCostPerRent,
 											 float inEarningsPerRent)
-	: m_BoatName(inName)
+	: m_EstimatedReturnOnInvestment(0.0f)
+	, m_BoatName(inName)
 	, m_NrOfRents(inNrOfRents)
 	, m_MaintenanceCostPerRent(inMaintenanceCostPerRent)
-	, m_CrewCostPerRent(inCrewCostPerRent)
 	, m_EarningsPerRent(inEarningsPerRent)
 {
 }
@@ -16,7 +15,7 @@ BoatMonthlyRentalInfo::BoatMonthlyRentalInfo(const string& inName,
 float BoatMonthlyRentalInfo::CalculateReturnOnInvestment() const
 {
 	const float earnings = CalculateEarning();
-	const float cost = CalculateMaintenanceCost() + CalculateCrewCost();
+	const float cost = CalculateMaintenanceCost();
 	return (earnings / cost) * 100.0f - 100.0f;
 }
 
@@ -30,7 +29,7 @@ float BoatMonthlyRentalInfo::CalculateMaintenanceCost() const
 	return m_NrOfRents * m_MaintenanceCostPerRent;
 }
 
-float BoatMonthlyRentalInfo::CalculateCrewCost() const
+void BoatMonthlyRentalInfo::SetEstimatedReturnOnInvestment(const float inValue)
 {
-	return m_NrOfRents * m_CrewCostPerRent;
+	m_EstimatedReturnOnInvestment = inValue;
 }

@@ -11,20 +11,23 @@ public:
 	BoatMonthlyRentalInfo(const string& inName, 
 						  unsigned int inNrOfRents, 
 						  float inMaintenanceCostPerRent,
-						  float inCrewCostPerRent, 
 						  float inEarningsPerRent);
 
 	// Public query API
 	float CalculateReturnOnInvestment() const;
 	float CalculateEarning() const;
 	float CalculateMaintenanceCost() const;
-	float CalculateCrewCost() const;
+
+	// Public modification API
+	void SetEstimatedReturnOnInvestment(const float inValue);
 
 private:
-	// Data
+	// Estimate based on the previous month
+	float m_EstimatedReturnOnInvestment;
+	
+	// Monthly info
 	string m_BoatName;
 	unsigned int m_NrOfRents;
 	float m_MaintenanceCostPerRent;
-	float m_CrewCostPerRent;
 	float m_EarningsPerRent;
 };
